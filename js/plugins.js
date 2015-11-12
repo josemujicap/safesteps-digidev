@@ -19,6 +19,58 @@
             console[method] = noop;
         }
     }
+
 }());
 
 // Place any jQuery/helper plugins in here.
+
+$(document).ready(function(){ 
+
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
+    center: true,
+    items:2,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true,
+    autoplaySpeed:3000,
+    responsive:{
+        0:{
+            items:3
+            },
+        400:{
+            items:4
+            },
+        600:{
+            items:7
+            }
+        }
+    });
+    owl.trigger('autoplay.play.owl',[5000])
+
+  var owl = $('.owl-carousel-2');
+  owl.owlCarousel({
+    center: true,
+    items:2,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true,
+    autoplaySpeed:3000,
+    responsive:{
+        0:{
+            items:3
+            },
+        400:{
+            items:4
+            },
+        600:{
+            items:7
+            }
+        }
+    });
+    owl.trigger('autoplay.play.owl',[5000])
+});

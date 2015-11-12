@@ -1,0 +1,411 @@
+@import "variables.less";  
+
+body {
+	overflow-x: hidden;
+	color: @grey;
+	background-color: @white; 
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 18px;
+}
+img{
+	width:100%;
+}
+p { 
+	margin: 0;
+} 
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+	color: @green;
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 600;
+	margin-top: 0;
+} 
+h4{
+	font-size: 28px;
+}
+.font-2x{
+	font-size: 20px;
+}
+.font-3x{
+	font-size: 27px;
+}
+
+.img-centered {
+	margin: 0 auto;
+}
+
+
+
+	/*------------------------------------------------------------------------------
+	*	1 Header
+	*-----------------------------------------------------------------------------*/
+header{
+	border-top: solid 35px @purple;
+	color: @purple; 
+	//position: fixed;
+	width: 100%;
+	background-color: @white;
+    padding-bottom: 10px;
+	//top: 0;
+	.logo{
+		padding-top: 22px;
+		img{
+			width: 100%;
+			max-width: 211px; 
+		}
+	}
+	.col-md-5{
+		@media @md-and-more{
+			width: 36%; 
+		}
+	}
+	.emergency,.call{
+		padding-top: 15px;
+	}
+	.call{
+		@media @sm-or-less{ 
+			padding-top: 0;
+		}
+	}
+	.quick{
+	    position: absolute;
+	    top: 0;
+	    right: 30px;
+	    margin-top: -35px;
+	}
+}
+
+
+	/*------------------------------------------------------------------------------
+	*	2 Navbar
+	*-----------------------------------------------------------------------------*/
+
+.navbar{
+	ul {
+	    display:table-row;   
+	    li
+	    {
+	        display: table-cell;
+	        height: 100px;
+	        list-style-type: none;
+	        margin: 10px;
+	        vertical-align: middle; 
+	        cursor: pointer;
+	        a {
+	            display:table-cell;
+	            vertical-align: middle;
+	            height:100px; 
+	            cursor: pointer;
+	            img{
+	            	width:100%;
+	            	cursor: pointer;
+	            }
+	            img.menu1{
+	            	max-width: 225px;
+	            }
+	            img.menu2{
+	            	max-width: 249px;
+	            }
+	            img.menu3{
+	            	max-width: 298px;
+	            }
+	            img.menu4{
+	            	max-width: 233px;
+	            }
+	        }
+	    }
+	}	
+}
+
+	/*------------------------------------------------------------------------------
+	*	3 Sections
+	*-----------------------------------------------------------------------------*/
+
+section{ 
+	color: @purple;
+	position: relative;
+	h3{
+		font-size: 36px;
+		font-weight: 600;
+	} 
+	figure{
+		text-align: right;
+		@media @sm-or-less{
+			text-align: center;
+		}
+	}
+
+	figcaption{
+		p{ 	
+			font-style: italic;
+			font-size: 16px;
+		}
+	}
+}
+
+.arrow{
+	width: 33px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 40px 30px; 
+	a{
+		text-decoration: none;
+		img{
+			width:auto;
+		}
+	}
+
+} 
+
+.border-yellow{
+	border-bottom: 20px solid @dark_yellow;
+	width: 100%
+}
+.border-green{
+	border-bottom: 20px solid @green;
+	width: 100%
+}
+.border-blue{
+	border-bottom: 20px solid @light_blue;
+	width: 100%
+}
+.border-red{
+	border-bottom: 20px solid @red;
+	width: 100%
+}
+.border-purple{
+	border-bottom: 20px solid @purple;
+	width: 100%
+}
+
+.margin-header{
+	margin-top: 165px;
+}
+
+.grandient-yellow{ 
+	background: @dark_yellow; /* Old browsers */
+	background: -moz-linear-gradient(top,  @dark_yellow 0%, #ffb900 40%, @light_yellow 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  @dark_yellow 0%,#ffb900 40%,@light_yellow 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  @dark_yellow 0%,#ffb900 40%,@light_yellow 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@dark_yellow', endColorstr='@light_yellow',GradientType=0 ); /* IE6-9 */
+}
+
+.background-green{
+	background-color: @light_green;
+	color: @white;
+	padding: 15px 0;
+	hr{ 
+    	border-top: 1px solid @white;
+	}
+}
+.background-red{
+	background-color: @red;
+	color: @white;
+	padding: 15px 0;
+	hr{ 
+    	border-top: 1px solid @white;
+	}
+}
+.background-blue{ 
+	background-color: @light_blue;
+	color: @purple;
+	padding: 15px 0;
+	hr{ 
+    	border-top: 1px solid @purple;
+	}
+}
+.background-purple{ 
+	background-color: @light_purple;
+	color: @white;
+	padding: 15px 0;
+	hr{ 
+    	border-top: 1px solid @white;
+	}
+}
+.background-grey{ 
+	background-color: @grey;
+	color: @black;
+	padding: 15px 0;
+	hr{ 
+    	border-top: 1px solid @black;
+	}
+}
+.background-white{ 
+	background-color: @white;
+	color: @black;
+	padding: 15px 0;
+	hr{ 
+    	border-top: 1px solid @black;
+	}
+}
+.content{
+	padding: 20px 15px;
+}
+	/*------------------------------------------------------------------------------
+	*	3.1 Carousel
+	*-----------------------------------------------------------------------------*/
+
+.owl-carousel{
+	border-top: 1px solid @white;
+	border-bottom: 1px solid @white;
+	padding: 24px 0;
+}
+
+	/*------------------------------------------------------------------------------
+	*	3.2 Section 2
+	*-----------------------------------------------------------------------------*/
+
+.background1{
+	background-image: url(../img/section1.jpg);
+	background-size: cover; 
+	margin: 25px 0;
+	padding: 15px;
+}
+
+.title1{
+	width: 100%;
+	max-width: 330px;
+}
+	/*------------------------------------------------------------------------------
+	*	3.3 Section 3
+	*-----------------------------------------------------------------------------*/
+
+.title2{
+	width: 100%;
+	max-width: 347px;
+}	
+	
+	/*------------------------------------------------------------------------------
+	*	3.4 Section 4
+	*-----------------------------------------------------------------------------*/
+
+.title3{
+	width: 100%;
+	max-width: 313px;
+}	
+	/*------------------------------------------------------------------------------
+	*	3.5 Section 5
+	*-----------------------------------------------------------------------------*/
+
+.title4{
+	width: 100%;
+	max-width: 314px;
+}
+
+.img-logo{
+	width: 100%;
+	max-width: 308px;
+	margin: 15px 0;
+}
+	/*------------------------------------------------------------------------------
+	*	3.6 Section 6
+	*-----------------------------------------------------------------------------*/
+
+.title5{
+	width: 100%;
+	max-width: 313px;
+} 
+
+	/*------------------------------------------------------------------------------
+	*	4 Footer
+	*-----------------------------------------------------------------------------*/
+footer{
+	padding-bottom: 0;
+	p{
+		font-size: 16px;
+		@media @sm-or-less{ 
+    		padding: 15px 0;
+		}
+	} 
+	.img-logo{ 
+		max-width: 211px;
+	}
+	.background-white{
+		padding-bottom: 250px; 
+		@media @xs{ 
+    		text-align: center;
+		}
+	}
+}
+.block-grid{ 
+    list-style-type: none;
+    padding: 0;  
+}
+.block-grid>li{
+	width: 16%;
+	list-style: none; 
+    display: inline-block;
+    vertical-align: top;
+	@media @sm{   
+		width: 32%; 
+	}
+	@media @xs{  
+		width: 49%; 
+	}
+}
+
+.sitemap-title{ 
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    min-height: 30px;
+    margin:0;
+}
+
+.sitemap-list{ 
+    list-style-type: none;
+    padding: 0;
+    li{ 
+    	line-height: 12px;
+    	font-size: 11px;
+    	padding: 0 5px;
+    	padding-bottom: 5px;
+    }
+    a{
+    	color: #656565;
+    }
+}
+
+.social-media-icons{
+	text-align: right;
+	@media @sm-or-less{ 
+		text-align: center;
+	}
+	a{
+		text-decoration: none;
+	}
+	img{
+		width: 33px;
+	}
+}
+	/*------------------------------------------------------------------------------
+	*	Btn 6
+	*-----------------------------------------------------------------------------*/
+
+.btn-default{
+	margin: 15px 0;
+	padding: 10px 25px;
+	border-radius: 0;
+	color: @white;
+	background-color: @red;
+	border: 0;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	cursor:pointer;
+	&:hover{ 
+		background-color: @red;
+		color: @white;
+	}
+} 
+
